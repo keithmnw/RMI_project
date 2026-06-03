@@ -3,6 +3,7 @@ Name: Joe Migwi
 Index: 220835
 Date: 22/05/2026
  */
+
 package rmi;
 
 import javafx.application.Application;
