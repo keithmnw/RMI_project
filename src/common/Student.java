@@ -1,6 +1,6 @@
-/*
+package server;/*
 Name: Jayden Kinoti
-Student Number: 220692
+server.Student Number: 220692
 Date: 22/05/2026
 */
 
