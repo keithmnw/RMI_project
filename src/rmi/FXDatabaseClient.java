@@ -5,6 +5,7 @@ Date: 22/05/2026
  */
 package rmi;
 
+import common.StudentService;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -24,7 +25,7 @@ import java.util.List;
 
 public class FXDatabaseClient extends Application {
 
-    private MyInterface remoteStub;
+    private StudentService remoteStub;
     private TableView<Student> studentTable;
     private ObservableList<Student> tableDataList;
     private Label statusLabel;
@@ -37,7 +38,7 @@ public class FXDatabaseClient extends Application {
             System.out.println("Initializing Database Client Network Interface...");
             // Connection will look locally for now; switch to Radmin IP later
             Registry registry = LocateRegistry.getRegistry("localhost", 1099);
-            this.remoteStub = (MyInterface) registry.lookup("Obj1");
+            this.remoteStub = (StudentService) registry.lookup("Obj1");
             System.out.println("Database Client connected to Remote Registry Successfully.");
         } catch (Exception e) {
             System.err.println("Database Client network linking failure.");
